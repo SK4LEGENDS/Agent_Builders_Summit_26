@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 1, delay: 0.7 }}
           className="mt-10 sm:mt-12 text-xs font-mono text-[#3A5566] tracking-wider uppercase"
         >
-          <span>Presented by RP &amp; AI Society × UiPath Community</span>
+          <span>Presented by RPA Society × UiPath Community</span>
         </motion.div>
       </div>
     </section>
