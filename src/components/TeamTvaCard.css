@@ -1,0 +1,342 @@
+/* TVA / Protocol 616 team ID cards — yellow + black maintained */
+
+.tva-card {
+  --tva-yellow: #e8a017;
+  --tva-yellow-deep: #d4920f;
+  --tva-ink: #0b0b0b;
+  --tva-ink-soft: #1a1a1a;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 5 / 8;
+  width: 100%;
+  max-width: 280px;
+  margin-inline: auto;
+  padding: 0.55rem 0.55rem 0.65rem;
+  border-radius: 0.65rem;
+  background: linear-gradient(165deg, var(--tva-yellow) 0%, var(--tva-yellow-deep) 100%);
+  border: 2px solid var(--tva-ink);
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  overflow: hidden;
+  transition:
+    transform 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+    box-shadow 0.4s ease;
+}
+
+.tva-card:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow:
+    0 22px 44px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(232, 160, 23, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.tva-card__inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  border: 1.5px solid var(--tva-ink);
+  border-radius: 0.35rem;
+  overflow: hidden;
+  background: var(--tva-yellow);
+}
+
+/* Top authority bar */
+.tva-card__authority {
+  flex-shrink: 0;
+  background: var(--tva-ink);
+  color: var(--tva-yellow);
+  text-align: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.4rem;
+  line-height: 1.2;
+}
+
+/* Stripe header like physical badge top */
+.tva-card__stripes {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.35rem 0.45rem 0.15rem;
+  background: var(--tva-ink);
+}
+
+.tva-card__stripes span {
+  display: block;
+  height: 0.28rem;
+  background: var(--tva-yellow);
+  border-radius: 1px;
+}
+
+.tva-card__stripes span:first-child {
+  height: 0.18rem;
+  opacity: 0.92;
+}
+
+/* TVA wordmark */
+.tva-card__logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.4rem 0.35rem;
+  background: var(--tva-yellow);
+}
+
+.tva-card__logo-mark {
+  font-family: ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.75rem, 6.5vw, 2.35rem);
+  letter-spacing: -0.06em;
+  line-height: 0.85;
+  color: var(--tva-ink);
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.tva-card__logo-mark .tva-a {
+  position: relative;
+  display: inline-block;
+  padding-inline: 0.02em;
+}
+
+/* Chevron bar through the A — TVA mark cue */
+.tva-card__logo-mark .tva-a::after {
+  content: '';
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  top: 42%;
+  height: 0.14em;
+  background: var(--tva-yellow);
+  box-shadow: 0 0 0 0.06em var(--tva-ink);
+  transform: skewX(-18deg);
+}
+
+/* Photo well */
+.tva-card__photo-row {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1.1rem minmax(0, 1fr) 1.1rem;
+  gap: 0.2rem;
+  padding: 0.25rem 0.35rem 0.35rem;
+  background: var(--tva-yellow);
+}
+
+.tva-card__rail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tva-ink);
+  color: var(--tva-yellow);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.tva-card__rail--chevrons {
+  background:
+    repeating-linear-gradient(
+      180deg,
+      var(--tva-ink) 0 7px,
+      transparent 7px 8px
+    ),
+    var(--tva-ink);
+}
+
+.tva-card__rail--chevrons::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0 5px,
+    var(--tva-yellow) 5px 6px,
+    transparent 6px 11px
+  );
+  opacity: 0.85;
+  mix-blend-mode: normal;
+}
+
+.tva-card__serial {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.42rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0.25rem 0;
+  z-index: 1;
+}
+
+.tva-card__rail--right .tva-card__serial {
+  transform: none;
+  writing-mode: vertical-rl;
+}
+
+.tva-card__frame {
+  position: relative;
+  min-height: 0;
+  border: 3px solid var(--tva-ink);
+  background: #111;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(232, 160, 23, 0.35);
+}
+
+.tva-card__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  /* Keep yellow/black identity — amber bureaucratic grade */
+  filter: grayscale(1) sepia(0.55) saturate(1.35) brightness(0.92) contrast(1.08);
+  transition: transform 0.55s cubic-bezier(0.19, 1, 0.22, 1), filter 0.4s ease;
+}
+
+.tva-card:hover .tva-card__frame img {
+  transform: scale(1.04);
+  filter: grayscale(0.85) sepia(0.62) saturate(1.45) brightness(0.95) contrast(1.1);
+}
+
+.tva-card__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  background:
+    linear-gradient(145deg, #2a2a2a, #111),
+    repeating-linear-gradient(
+      -18deg,
+      transparent,
+      transparent 6px,
+      rgba(232, 160, 23, 0.06) 6px,
+      rgba(232, 160, 23, 0.06) 7px
+    );
+  color: var(--tva-yellow);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.tva-card__placeholder-icon {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--tva-yellow);
+  opacity: 0.75;
+}
+
+/* Identity strip under photo */
+.tva-card__identity {
+  flex-shrink: 0;
+  padding: 0.45rem 0.5rem 0.4rem;
+  background: var(--tva-yellow);
+  border-top: 1.5px solid var(--tva-ink);
+  text-align: center;
+}
+
+.tva-card__name {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--tva-ink);
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.tva-card__role {
+  margin: 0.2rem 0 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tva-ink-soft);
+  opacity: 0.85;
+}
+
+/* Dark footer latch */
+.tva-card__footer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.5rem 0.5rem;
+  background: var(--tva-ink);
+  border-top: 2px solid var(--tva-ink);
+}
+
+.tva-card__latch {
+  width: 1.65rem;
+  height: 0.85rem;
+  border: 2px solid var(--tva-yellow);
+  border-radius: 2px;
+  position: relative;
+}
+
+.tva-card__latch::before,
+.tva-card__latch::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  width: 2px;
+  background: var(--tva-yellow);
+}
+
+.tva-card__latch::before {
+  left: 28%;
+}
+
+.tva-card__latch::after {
+  right: 28%;
+}
+
+.tva-card__protocol {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--tva-yellow);
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tva-card,
+  .tva-card__frame img {
+    transition: none;
+  }
+
+  .tva-card:hover {
+    transform: none;
+  }
+
+  .tva-card:hover .tva-card__frame img {
+    transform: none;
+  }
+}
+
+/* Doom mode — reinforce yellow/black identity */
+html[data-doom='on'] .tva-card {
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.55),
+    0 0 24px rgba(232, 160, 23, 0.18);
+}

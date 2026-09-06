@@ -1,0 +1,194 @@
+/* Animated Register CTA — ABS turquoise / glacier theme */
+
+.abs-reg-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.abs-reg-btn:focus-visible {
+  outline: 2px solid #629bb5;
+  outline-offset: 3px;
+}
+
+.abs-reg-btn--sm {
+  height: 2.35rem;
+  font-size: 0.8125rem;
+  padding-left: 0.95rem;
+  padding-right: 0.95rem;
+}
+
+.abs-reg-btn--md {
+  height: 3rem;
+  font-size: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.abs-reg-btn.w-full {
+  width: 100%;
+}
+
+.abs-reg-btn__inner,
+.abs-reg-btn__hover,
+.abs-reg-btn__static {
+  pointer-events: none;
+  display: block;
+}
+
+.abs-reg-btn__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.abs-reg-btn__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(70%);
+}
+
+/* Base pill — site turquoise */
+.abs-reg-btn__bg {
+  overflow: hidden;
+  border-radius: 9999px;
+  position: absolute;
+  inset: 0;
+  transform: scale(1);
+  transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #447f98;
+  border: 1px solid #447f98;
+}
+
+.abs-reg-btn__layers {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -60%;
+  aspect-ratio: 1 / 1;
+  width: max(200%, 10rem);
+  display: block;
+}
+
+.abs-reg-btn__layer {
+  border-radius: 9999px;
+  position: absolute;
+  inset: 0;
+  transform: scale(0);
+  display: block;
+}
+
+/* Hover wipe layers — ABS palette */
+.abs-reg-btn__layer--1 {
+  background-color: #3a6f86;
+}
+
+.abs-reg-btn__layer--2 {
+  background-color: #629bb5;
+}
+
+.abs-reg-btn__layer--3 {
+  background-color: #447f98;
+}
+
+.abs-reg-btn:hover .abs-reg-btn__static {
+  opacity: 0;
+  transform: translateY(-70%);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.3s linear;
+}
+
+.abs-reg-btn:hover .abs-reg-btn__hover {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.abs-reg-btn:hover .abs-reg-btn__layer {
+  transition:
+    transform 1.3s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.3s linear;
+}
+
+.abs-reg-btn:hover .abs-reg-btn__layer--1 {
+  transform: scale(1);
+}
+
+.abs-reg-btn:hover .abs-reg-btn__layer--2 {
+  transition-delay: 0.1s;
+  transform: scale(1);
+}
+
+.abs-reg-btn:hover .abs-reg-btn__layer--3 {
+  transition-delay: 0.2s;
+  transform: scale(1);
+}
+
+ /* Doom Protocol: green variants */
+html[data-doom='on'] .abs-reg-btn .abs-reg-btn__bg,
+html[data-doom='on'] a.abs-reg-btn .abs-reg-btn__bg,
+html[data-doom='on'] .abs-reg-btn__bg {
+  background-color: #16a34a !important;
+  border-color: #16a34a !important;
+}
+
+html[data-doom='on'] .abs-reg-btn .abs-reg-btn__layer--1,
+html[data-doom='on'] a.abs-reg-btn .abs-reg-btn__layer--1,
+html[data-doom='on'] .abs-reg-btn__layer--1 {
+  background-color: #14532d !important;
+}
+
+html[data-doom='on'] .abs-reg-btn .abs-reg-btn__layer--2,
+html[data-doom='on'] a.abs-reg-btn .abs-reg-btn__layer--2,
+html[data-doom='on'] .abs-reg-btn__layer--2 {
+  background-color: #22c55e !important;
+}
+
+html[data-doom='on'] .abs-reg-btn .abs-reg-btn__layer--3,
+html[data-doom='on'] a.abs-reg-btn .abs-reg-btn__layer--3,
+html[data-doom='on'] .abs-reg-btn__layer--3 {
+  background-color: #4ade80 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .abs-reg-btn:hover .abs-reg-btn__static,
+  .abs-reg-btn:hover .abs-reg-btn__hover,
+  .abs-reg-btn:hover .abs-reg-btn__layer {
+    transition: none;
+  }
+
+  .abs-reg-btn:hover .abs-reg-btn__static {
+    opacity: 1;
+    transform: none;
+  }
+
+  .abs-reg-btn:hover .abs-reg-btn__hover {
+    opacity: 0;
+  }
+
+  .abs-reg-btn:hover .abs-reg-btn__layer {
+    transform: scale(0);
+  }
+
+  .abs-reg-btn:hover .abs-reg-btn__bg {
+    background-color: #3a6f86;
+  }
+}
