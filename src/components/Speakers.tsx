@@ -61,9 +61,9 @@ const Speakers: React.FC = () => {
   return (
     <section
       id="speakers"
-      className="relative z-10 min-h-[70vh] py-16 sm:py-20 px-4 sm:px-6 lg:px-8"
+      className="relative z-10 min-h-[70vh] py-16 sm:py-20 px-4 sm:px-6 lg:px-8 scroll-mt-24"
     >
-      <div className="max-w-6xl mx-auto w-full">
+      <div className="max-w-screen-2xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ const Speakers: React.FC = () => {
             <UsersRound className="w-3.5 h-3.5 text-[#3A6F86]" aria-hidden />
             <span>SPEAKERS</span>
           </div>
-
+        
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-2 text-black font-display tracking-tight">
             VOICES OF ABS '26
           </h2>
@@ -83,13 +83,13 @@ const Speakers: React.FC = () => {
             Tentative
           </p>
         </motion.div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-          {speakers.slice(0, 4).map((speaker, index) => (
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8">
+          {speakers.slice(0, 5).map((speaker, index) => (
             <SpeakerCard key={index} speaker={speaker} index={index} />
           ))}
         </div>
-
+        
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

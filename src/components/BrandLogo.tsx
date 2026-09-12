@@ -72,7 +72,7 @@ const BrandLogo: React.FC<BrandLogoProps> = ({
             <span
               className={`${textMap[size]} font-extrabold text-white font-display leading-none tracking-tight`}
             >
-              ABS
+              SUMMIT
             </span>
           </span>
         )}

@@ -13,13 +13,13 @@ const aboutLinks = [
   { name: 'About the Summit', to: '/#about' },
   { name: 'Event Details', to: '/#details' },
   { name: 'Why Attend', to: '/#why-attend' },
-  { name: 'Highlights', to: '/#highlights' },
 ];
 
 const menuLinks = [
   { name: 'Agenda', to: '/#agenda' },
-  { name: 'Speakers', to: '/#speakers' },
   { name: 'Highlights', to: '/#highlights' },
+  { name: 'Speakers', to: '/#speakers' },
+  { name: 'Gallery', to: '/#gallery' },
   { name: 'Register', to: '/#register' },
 ];
 
@@ -59,9 +59,9 @@ const Footer: React.FC = () => {
             <Link to="/" className="inline-flex items-start gap-3 group" aria-label="ABS '26 home">
               <BrandLogo size="lg" />
               <span className="min-w-0">
-                <span className="block text-xl sm:text-2xl font-extrabold text-[#1A3A4A] font-display tracking-tight group-hover:text-turquoise transition-colors">
-                  ABS &apos;26
-                </span>
+                    <span className="block text-xl sm:text-2xl font-extrabold text-[#1A3A4A] font-display tracking-tight group-hover:text-turquoise transition-colors">
+                      SUMMIT 3.0
+                    </span>
                 <span className="mt-0.5 block text-sm font-semibold text-turquoise">
                   Agent Builder&apos;s Summit
                 </span>

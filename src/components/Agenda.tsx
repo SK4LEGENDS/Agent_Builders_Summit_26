@@ -41,28 +41,28 @@ const Agenda: React.FC = () => {
               </h3>
               <div className="space-y-4">
                 {day.items.map((item, itemIndex) => (
-                  <div 
-                    key={itemIndex}
-                    className="flex flex-col sm:flex-row p-5 bg-white shadow-[0_4px_20px_rgba(68,127,152,0.08)] ring-1 ring-[#629BB5]/10 rounded-xl hover:shadow-[0_8px_30px_rgba(68,127,152,0.15)] transition-shadow duration-300"
-                  >
+                   <div 
+                     key={itemIndex}
+                     className="flex flex-col sm:flex-row p-5 glass-panel bg-white/10 border border-white/10 rounded-xl hover:bg-white/20 transition-all duration-300"
+                   >
                     <div className="sm:w-1/4 mb-3 sm:mb-0">
-                      <span className="inline-block px-3 py-1 bg-[#E8EEF1] text-[#447F98] text-sm font-bold font-mono rounded-md">
+                      <span className="inline-block px-3 py-1 text-white text-sm font-bold font-mono">
                         {item.time}
                       </span>
                     </div>
-                    <div className="sm:w-3/4 sm:pl-4 border-l-0 sm:border-l-2 border-[#629BB5]/20">
-                      <h4 className="text-lg font-bold text-[#1A3A4A] mb-1">
-                        {item.title}
-                      </h4>
-                      {item.speaker && (
-                        <p className="text-[#629BB5] font-medium text-sm">
-                          Speaker: {item.speaker}
+                      <div className="sm:w-3/4 sm:pl-4 border-l-0 sm:border-l-2 border-[#629BB5]/20 text-white">
+                        <h4 className="text-lg font-bold mb-1">
+                          {item.title}
+                        </h4>
+                        {item.speaker && (
+                          <p className="text-white/70 font-medium text-sm">
+                            Speaker: {item.speaker}
+                          </p>
+                        )}
+                        <p className="text-white/50 text-xs uppercase tracking-widest mt-2 font-semibold opacity-70">
+                          {item.type}
                         </p>
-                      )}
-                      <p className="text-[#3A5566] text-xs uppercase tracking-widest mt-2 font-semibold opacity-70">
-                        {item.type}
-                      </p>
-                    </div>
+                      </div>
                   </div>
                 ))}
               </div>

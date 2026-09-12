@@ -11,6 +11,7 @@ import {
   Sparkles,
   HelpCircle,
   Ticket,
+  ImageIcon,
 } from 'lucide-react';
 import { useDoomProtocol } from '../context/DoomProtocolContext';
 import RegisterButton from './RegisterButton';
@@ -20,8 +21,9 @@ const navItems = [
   { name: 'About', href: '#about', icon: Info },
   { name: 'Event', href: '#details', icon: MapPin },
   { name: 'Agenda', href: '#agenda', icon: Calendar },
-  { name: 'Speakers', href: '#speakers', icon: Users },
   { name: 'Highlights', href: '#highlights', icon: Sparkles },
+  { name: 'Speakers', href: '#speakers', icon: Users },
+  { name: 'Gallery', href: '#gallery', icon: ImageIcon },
   { name: 'Why Attend', href: '#why-attend', icon: HelpCircle },
 ];
 
@@ -137,7 +139,7 @@ const Navbar: React.FC = () => {
     setActiveSection(id);
     const el = document.getElementById(id);
     if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+    const top = el.getBoundingClientRect().top + window.scrollY - headerHeight;
     window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
     window.history.pushState(null, '', href);
   };

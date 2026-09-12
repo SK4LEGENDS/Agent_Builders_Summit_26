@@ -11,6 +11,15 @@ export interface Speaker {
 
 export const speakers: Speaker[] = [
   {
+    name: 'Kirubaharan M S',
+    designation: 'Senior Vice President & India Site Lead',
+    company: "ABS '26",
+    featured: true,
+    image: 'kirubaharan.jpg',
+    bio: "Leadership experience across AI, product, engineering, GCCs and P&L. Author of the upcoming Artificial Abundance, exploring what it means to remain human in an age of abundant intelligence.",
+  },
+  {
+
     name: 'Treesa Maria Pius',
     designation: 'Keynote Speaker',
     company: "ABS '26",

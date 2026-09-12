@@ -1,18 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Bot, Users, Building2, Share2, Code2, Lightbulb, ShieldAlert } from 'lucide-react';
-
-const focusAreas = [
-  { title: 'AI', icon: Cpu, desc: 'Generative AI, Foundation Models & Deep Learning Architectures' },
-  { title: 'MULTI-AGENT SYSTEMS', icon: Bot, desc: 'Autonomous Agent Orchestration, Multi-Agent Protocols & Workflows' },
-  { title: 'ENTERPRISE AI', icon: Building2, desc: 'Connecting People, Processes & Scalable Business Intelligence' },
-  { title: 'MODERN SOFTWARE ENGINEERING', icon: Code2, desc: 'Production System Architecture, Developer Tooling & Full-Stack Mastery' },
-  { title: 'DEVELOPER COMMUNITIES', icon: Users, desc: 'Empowering Student Tech Clubs, Open-Source & Collaborative Ecosystems' },
-  { title: 'NETWORKING', icon: Share2, desc: 'Direct Collaboration with Industry Leaders & Fellow Builders' },
-  { title: 'STUDENT INNOVATION', icon: Lightbulb, desc: 'Showcasing Breakthrough Projects & Next-Gen Student Engineering' },
-];
+import { ShieldAlert, GraduationCap, Code2, Briefcase, Users, BookOpen, Search, Repeat, Network } from 'lucide-react';
 
 const AboutSection: React.FC = () => {
+  const targets = [
+    { title: 'Students', icon: GraduationCap, desc: 'Exploring AI and building the next generation of systems' },
+    { title: 'Developers', icon: Code2, desc: 'Building with Agents and mastering agentic workflows' },
+    { title: 'Industry Professionals', icon: Briefcase, desc: 'Implementing Enterprise AI and automation at scale' },
+    { title: 'Community Builders', icon: Users, desc: 'Contributing to technical ecosystems and open source' },
+  ];
+
+  const goals = [
+    { title: 'Learn', icon: BookOpen, desc: 'Learn from builders and industry leaders' },
+    { title: 'Explore', icon: Search, desc: 'Explore emerging technologies in Agentic AI' },
+    { title: 'Exchange', icon: Repeat, desc: 'Exchange ideas and best practices' },
+    { title: 'Connect', icon: Network, desc: 'Connect with a community of innovators' },
+  ];
+
   return (
     <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 relative z-10">
       <div className="max-w-6xl mx-auto">
@@ -23,7 +27,7 @@ const AboutSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center max-w-4xl mx-auto mb-16"
+          className="text-center max-w-4xl mx-auto mb-20"
         >
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF] border border-[#629BB5]/30 text-[#447F98] text-xs font-mono font-bold tracking-widest uppercase mb-4">
             <ShieldAlert className="w-4 h-4 text-[#3A6F86]" aria-hidden />
@@ -38,43 +42,88 @@ const AboutSection: React.FC = () => {
 
           <div className="glass-panel p-8 rounded-3xl shadow-2xl text-left space-y-4">
             <p className="text-base sm:text-lg text-[#1A3A4A] leading-relaxed font-medium">
-              Agent Builder&apos;s Summit &apos;26 is a full-day, offline technology summit hosted at St. Joseph&apos;s College of Engineering, Chennai — designed to bring students, developers, AI practitioners, and industry leaders under one roof.
+              Agent Builders Summit &apos;26 brings together <i className="text-[#447F98]">students, developers, AI enthusiasts, automation professionals, industry leaders, and community builders</i> to explore the evolving world of <i className="text-[#447F98]">AI Agents, Agentic AI, Automation, Multi-Agent Systems, and Enterprise AI</i>.
             </p>
             <p className="text-sm sm:text-base text-[#3A5566] leading-relaxed font-normal">
-              The summit features keynote sessions from industry experts, hands-on workshops on AI agents and automation, interactive panel discussions, community-building activities, and networking opportunities with professionals shaping the agentic future.
-            </p>
-            <p className="text-sm sm:text-base text-[#3A5566] leading-relaxed font-normal">
-              Whether you're a first-year student exploring AI or a seasoned developer building multi-agent systems — ABS '26 is built for you. Expect deep-dive technical talks, live demos, quizzes, awards, certificates, and high-tea networking — all completely free of charge.
+              The summit creates a space to learn from builders, explore emerging technologies, exchange ideas, and connect with the community shaping the next generation of intelligent systems.
             </p>
           </div>
         </motion.div>
 
-        {/* Floating 3D Panels Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 [&>*:last-child]:sm:col-span-2 [&>*:last-child]:sm:max-w-md [&>*:last-child]:sm:mx-auto [&>*:last-child]:lg:col-span-1 [&>*:last-child]:lg:max-w-none [&>*:last-child]:lg:col-start-2">
-          {focusAreas.map((area, index) => {
-            const Icon = area.icon;
-            return (
-              <motion.div
-                key={area.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.08 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -8, transition: { duration: 0.35, ease: [0.19, 1, 0.22, 1] } }}
-                className="group relative p-6 glass-panel rounded-2xl shadow-xl abs-card"
-              >
-                <div className="abs-card__icon w-12 h-12 rounded-xl bg-[#FFFFFF] border border-[#629BB5]/40 p-0.5 mb-4 flex items-center justify-center text-[#629BB5]">
-                  <Icon className="w-6 h-6" aria-hidden />
-                </div>
-                <h4 className="abs-card__title text-lg font-bold text-[#1A3A4A] mb-2 font-display">
-                  {area.title}
-                </h4>
-                <p className="abs-card__body text-xs sm:text-sm text-[#455A66] leading-relaxed font-normal">
-                  {area.desc}
-                </p>
-              </motion.div>
-            );
-          })}
+        {/* Who Is It For Grid */}
+        <div className="mb-24">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h3 className="text-2xl sm:text-4xl font-extrabold text-black font-display mb-4 italic">
+              Who Is It For?
+            </h3>
+            <div className="text-lg sm:text-xl font-bold text-[#447F98] tracking-wide italic">
+              The Builders of Tomorrow
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {targets.map((target, index) => {
+              const Icon = target.icon;
+              return (
+                <motion.div
+                  key={target.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -8 }}
+                  className="p-6 glass-panel rounded-2xl shadow-xl text-center group hover:border-[#629BB5]/50 transition-colors"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-white border border-[#629BB5]/30 mx-auto mb-4 flex items-center justify-center text-[#629BB5] group-hover:scale-110 transition-transform">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-lg font-bold text-[#1A3A4A] mb-2 font-display">{target.title}</h4>
+                  <p className="text-xs sm:text-sm text-[#455A66] leading-relaxed">{target.desc}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Core Goals Grid */}
+        <div className="text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <p className="text-lg sm:text-xl text-[#1A3A4A] font-medium max-w-2xl mx-auto">
+              A space to <strong className="text-black">learn, connect, collaborate, and explore</strong> what&apos;s next.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {goals.map((goal, index) => {
+              const Icon = goal.icon;
+              return (
+                <motion.div
+                  key={goal.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="p-6 glass-panel rounded-2xl shadow-lg border border-[#629BB5]/20"
+                >
+                  <Icon className="w-8 h-8 text-[#447F98] mx-auto mb-3" />
+                  <h4 className="text-md font-bold text-[#1A3A4A] mb-1 font-display">{goal.title}</h4>
+                  <p className="text-xs text-[#455A66]">{goal.desc}</p>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
 
       </div>

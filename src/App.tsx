@@ -9,6 +9,7 @@ import AboutSection from './components/AboutSection';
 import EventDetails from './components/EventDetails';
 import Agenda from './components/Agenda';
 import Speakers from './components/Speakers';
+import EventGallery from './components/EventGallery';
 import HighlightCards from './components/HighlightCards';
 import WhyAttend from './components/WhyAttend';
 import Team from './components/Team';
@@ -72,8 +73,9 @@ function HomePage() {
         <AboutSection />
         <EventDetails />
         <Agenda />
-        <Speakers />
         <HighlightCards />
+        <Speakers />
+        <EventGallery />
         <WhyAttend />
         <Registration />
       </main>

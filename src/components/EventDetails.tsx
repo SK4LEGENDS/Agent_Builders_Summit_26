@@ -5,9 +5,9 @@ import { Calendar, MapPin, Navigation, Clock, ShieldCheck } from 'lucide-react';
 const eventDetails = [
   {
     icon: Calendar,
-    title: 'EDITION',
-    value: '2026',
-    subtitle: "Agent Builder's Summit 2026",
+    title: 'DATE',
+    value: '26',
+    subtitle: 'September, 2026',
   },
   {
     icon: MapPin,
