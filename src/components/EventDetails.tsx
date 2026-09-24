@@ -25,7 +25,7 @@ const eventDetails = [
     icon: Clock,
     title: 'DURATION',
     value: 'Full Day',
-    subtitle: '09:45 AM – 04:00 PM+',
+    subtitle: '08:00 AM – 04:30 PM+',
   },
   {
     icon: ShieldCheck,
