@@ -25,7 +25,7 @@ export const speakers: Speaker[] = [
   {
 
     name: 'Treesa Maria Pius',
-    designation: 'Keynote Speaker',
+    designation: 'Senior Associate Consultant',
     company: "Infosys",
     session: "A Day in a Builder's Life",
     featured: true,
@@ -36,7 +36,7 @@ export const speakers: Speaker[] = [
   },
   {
     name: 'Palaniyappan P',
-    designation: 'UiPath MVP',
+    designation: 'Technical Architect',
     company: "Novo Nordisk",
     session: 'Multi-Agent Orchestration is the Future',
     featured: true,
@@ -47,7 +47,7 @@ export const speakers: Speaker[] = [
   },
   {
     name: 'Nithin Krishna',
-    designation: 'UiPath MVP',
+    designation: 'Agentic Automation ',
     company: "COE -KLA",
     session: 'How AI Powers Modern Enterprise',
     featured: true,
@@ -58,7 +58,7 @@ export const speakers: Speaker[] = [
   },
   {
     name: 'Ghanashyam Shankar',
-    designation: 'Keynote Speaker',
+    designation: 'Founder & CEO',
     company: "Edler Hub",
     featured: true,
     image: 'ghanashyam.jpg',
