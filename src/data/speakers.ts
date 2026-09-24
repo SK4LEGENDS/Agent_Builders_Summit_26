@@ -16,7 +16,7 @@ export const speakers: Speaker[] = [
     designation: 'Senior Vice President & India Site Lead',
     company: "Cardinality.AI",
     featured: true,
-    image: 'kirubakaran-new.jpg',
+    image: 'Kirubakaran-new.jpg',
     bio: "Leadership experience across AI, product, engineering, GCCs and P&L. Author of the upcoming Artificial Abundance, exploring what it means to remain human in an age of abundant intelligence.",
     linkedin: 'https://www.linkedin.com/in/mskiruba/',
   },
