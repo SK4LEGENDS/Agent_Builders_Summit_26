@@ -26,7 +26,7 @@ export const speakers: Speaker[] = [
 
     name: 'Treesa Maria Pius',
     designation: 'Keynote Speaker',
-    company: "ABS '26",
+    company: "Infosys",
     session: "A Day in a Builder's Life",
     featured: true,
     image: 'treesa.jpg',
@@ -48,7 +48,7 @@ export const speakers: Speaker[] = [
   {
     name: 'Nithin Krishna',
     designation: 'UiPath MVP',
-    company: "ABS '26",
+    company: "COE -KLA",
     session: 'How AI Powers Modern Enterprise',
     featured: true,
     image: 'nithin.jpg',
@@ -59,7 +59,7 @@ export const speakers: Speaker[] = [
   {
     name: 'Ghanashyam Shankar',
     designation: 'Keynote Speaker',
-    company: "ABS '26",
+    company: "Edler Hub",
     featured: true,
     image: 'ghanashyam.jpg',
     bio: "Design Thinking and Design Sprint facilitator with nearly two decades of IT industry experience. Founder of Edler Hub, he has empowered 2,500+ professionals and students through innovation-focused workshops and programs.",
