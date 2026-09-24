@@ -80,7 +80,7 @@ const Speakers: React.FC = () => {
             VOICES OF ABS '26
           </h2>
           <p className="text-sm font-mono text-[#629BB5] font-bold tracking-widest uppercase mb-4">
-            Tentative
+            FIXED SPEAKERS
           </p>
         </motion.div>
         
