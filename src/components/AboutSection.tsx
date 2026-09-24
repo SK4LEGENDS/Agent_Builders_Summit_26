@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { ShieldAlert, GraduationCap, Code2, Briefcase, Users, BookOpen, Search, Repeat, Network } from 'lucide-react';
 
 const AboutSection: React.FC = () => {
-  const targets = [
-    { title: 'Students', icon: GraduationCap, desc: 'Exploring AI and building the next generation of systems' },
-    { title: 'Developers', icon: Code2, desc: 'Building with Agents and mastering agentic workflows' },
-    { title: 'Industry Professionals', icon: Briefcase, desc: 'Implementing Enterprise AI and automation at scale' },
-    { title: 'Community Builders', icon: Users, desc: 'Contributing to technical ecosystems and open source' },
-  ];
+ const targets = [
+  { title: 'Students', icon: GraduationCap, desc: 'Exploring AI and building the next generation of systems' },
+  { title: 'Aspiring Builders', icon: Code2, desc: 'Building with Agents and mastering agentic workflows' },
+  { title: 'Student Developers', icon: Briefcase, desc: 'Implementing Enterprise AI and automation at scale' },
+  { title: 'Automation Enthusiasts', icon: Users, desc: 'Contributing to technical ecosystems and open source' },
+];
 
   const goals = [
     { title: 'Learn', icon: BookOpen, desc: 'Learn from builders and industry leaders' },
