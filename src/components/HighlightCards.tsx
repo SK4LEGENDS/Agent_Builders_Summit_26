@@ -7,6 +7,7 @@ import { Mic, Bot, Users, Sparkles, Share2, Trophy, CheckCircle2, Building2, Cod
     { title: 'Builder Sessions', icon: Code2, desc: 'Learn from experienced builders and gain practical insights from their journeys.' },
     { title: 'Interactive Challenges', icon: Sparkles, desc: 'Put your ideas and problem-solving skills to the test through engaging experiences.' },
     { title: 'Enterprise AI Insights', icon: Building2, desc: 'Understand how AI and automation are transforming real-world businesses and industries.' },
+    { title: 'Builder Stories', icon: Mic, desc: 'Hear how builders turned ideas into projects and learn from their journeys.' },
     { title: 'Network. Connect. Collaborate.', icon: Share2, desc: 'Meet fellow builders, developers, industry professionals, and AI enthusiasts. Exchange ideas and build meaningful connections.' },
     { title: 'Namma Chennai Energy', icon: MapPin, desc: 'Big ideas, curious minds, builder conversations, and the unmistakable energy of Chennai.' },
   ];
