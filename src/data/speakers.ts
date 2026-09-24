@@ -8,6 +8,7 @@ export interface Speaker {
   /** Filename under /public/speakers/ — any common image type (png, jpg, webp, …) */
   image: string;
   linkedin?: string;
+  imagePosition?: string;
 }
 
 export const speakers: Speaker[] = [
@@ -19,6 +20,7 @@ export const speakers: Speaker[] = [
     image: 'Kirubakaran-new.jpg',
     bio: "Leadership experience across AI, product, engineering, GCCs and P&L. Author of the upcoming Artificial Abundance, exploring what it means to remain human in an age of abundant intelligence.",
     linkedin: 'https://www.linkedin.com/in/mskiruba/',
+    imagePosition: 'center 18%',
   },
   {
 
@@ -30,7 +32,7 @@ export const speakers: Speaker[] = [
     image: 'treesa.jpg',
     bio: "UiPath Certified RPA Professional and Senior Associate Consultant at Infosys, specializing in RPA and Agentic Automation. Passionate about using intelligent automation to improve business performance.",
     linkedin: 'https://www.linkedin.com/in/treesa-maria-pius/',
-    
+    imagePosition: 'center 18%',
   },
   {
     name: 'Palaniyappan P',
@@ -41,6 +43,7 @@ export const speakers: Speaker[] = [
     image: 'palaniyappan.jpg',
     bio: "5x UiPath MVP and Senior Architect at Novo Nordisk, specializing in Enterprise AI, Agentic Automation, and intelligent automation. Experienced in designing scalable AI solutions and leading enterprise automation initiatives.",
     linkedin: 'https://www.linkedin.com/in/palaniyappan-p-uipathmvp',
+    imagePosition: 'center 15%',
   },
   {
     name: 'Nithin Krishna',
@@ -51,6 +54,7 @@ export const speakers: Speaker[] = [
     image: 'nithin.jpg',
     bio: "UiPath MVP and Applied AI professional at KLA, specializing in Agentic Automation and real-world AI solutions. Focused on building and deploying AI systems that deliver practical business impact.",
     linkedin: 'https://www.linkedin.com/in/nmnithinkrishna/',
+    imagePosition: 'center 16%',
   },
   {
     name: 'Ghanashyam Shankar',
@@ -60,6 +64,7 @@ export const speakers: Speaker[] = [
     image: 'ghanashyam.jpg',
     bio: "Design Thinking and Design Sprint facilitator with nearly two decades of IT industry experience. Founder of Edler Hub, he has empowered 2,500+ professionals and students through innovation-focused workshops and programs.",
     linkedin: 'https://www.linkedin.com/in/ghanashyam/',
+    imagePosition: 'center 20%',
   },
   {
     name: 'Dhivya Mohanakrishnan',
@@ -69,5 +74,6 @@ export const speakers: Speaker[] = [
     image: 'dhivya-new.jpg',
     bio: 'UiPath Chennai Chapter - Community Award Winner',
     linkedin: 'https://www.linkedin.com/in/mdhivya/',
+    imagePosition: 'center 12%',
   },
 ];
