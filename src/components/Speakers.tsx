@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { UsersRound } from 'lucide-react';
+import { UsersRound, Linkedin } from 'lucide-react';
 import { speakers, type Speaker } from '../data/speakers';
 import { useFlexibleImage } from '../utils/flexibleImage';
 
@@ -15,14 +15,36 @@ const SpeakerCard: React.FC<{ speaker: Speaker; index: number }> = ({ speaker, i
     .substring(0, 2)
     .toUpperCase();
 
+  const CardComponent = speaker.linkedin ? motion.a : motion.article;
+  const linkProps = speaker.linkedin
+    ? {
+      href: speaker.linkedin,
+      target: '_blank',
+      rel: 'noopener noreferrer',
+      'aria-label': `${speaker.name}'s LinkedIn profile`,
+    }
+    : {};
+
   return (
-    <motion.article
+    <CardComponent
+      {...linkProps}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, delay: Math.min(index * 0.05, 0.4) }}
       viewport={{ once: true }}
-      className="group relative aspect-[4/5] overflow-hidden bg-[#E8EEF1] shadow-[0_8px_28px_rgba(68,127,152,0.12)] ring-1 ring-[#629BB5]/15 rounded-lg"
+      className={`group relative aspect-[4/5] overflow-hidden bg-[#E8EEF1] shadow-[0_8px_28px_rgba(68,127,152,0.12)] ring-1 ring-[#629BB5]/15 rounded-lg block ${speaker.linkedin ? 'cursor-pointer' : ''
+        }`}
     >
+      {/* Top-Right LinkedIn Badge on Image */}
+      {speaker.linkedin && (
+        <div
+          className="absolute top-3 right-3 z-20 p-2 rounded-full bg-black/40 backdrop-blur-md text-white/90 border border-white/20 group-hover:bg-[#0077B5] group-hover:border-[#0077B5] group-hover:text-white transition-all shadow-md"
+          title={`View ${speaker.name}'s LinkedIn profile`}
+        >
+          <Linkedin className="w-4 h-4" />
+        </div>
+      )}
+
       {!failed && src ? (
         <img
           src={src}
@@ -40,9 +62,19 @@ const SpeakerCard: React.FC<{ speaker: Speaker; index: number }> = ({ speaker, i
 
       <div className="absolute bottom-0 left-0 right-0 p-5 flex flex-col justify-end text-white h-full">
         <div className="mt-auto">
-          <h3 className="text-xl font-bold font-display leading-snug tracking-tight text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.8)]">
-            {speaker.name}
-          </h3>
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="text-xl font-bold font-display leading-snug tracking-tight text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.8)]">
+              {speaker.name}
+            </h3>
+            {speaker.linkedin && (
+              <span
+                className="text-white/80 group-hover:text-white group-hover:bg-[#0077B5] transition-colors p-1.5 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0"
+                aria-hidden="true"
+              >
+                <Linkedin className="w-3.5 h-3.5" />
+              </span>
+            )}
+          </div>
           <p className="mt-1 text-sm text-platinum font-medium">
             {speaker.designation} @ {speaker.company}
           </p>
@@ -53,7 +85,7 @@ const SpeakerCard: React.FC<{ speaker: Speaker; index: number }> = ({ speaker, i
           </div>
         </div>
       </div>
-    </motion.article>
+    </CardComponent>
   );
 };
 
@@ -75,18 +107,18 @@ const Speakers: React.FC = () => {
             <UsersRound className="w-3.5 h-3.5 text-[#3A6F86]" aria-hidden />
             <span>SPEAKERS</span>
           </div>
-        
+
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-2 text-black font-display tracking-tight">
             VOICES OF ABS '26
           </h2>
         </motion.div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8">
-          {speakers.slice(0, 5).map((speaker, index) => (
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 sm:gap-8">
+          {speakers.slice(0, 6).map((speaker, index) => (
             <SpeakerCard key={index} speaker={speaker} index={index} />
           ))}
         </div>
-        
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
