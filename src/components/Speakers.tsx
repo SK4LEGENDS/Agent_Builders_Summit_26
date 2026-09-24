@@ -79,9 +79,6 @@ const Speakers: React.FC = () => {
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-2 text-black font-display tracking-tight">
             VOICES OF ABS '26
           </h2>
-          <p className="text-sm font-mono text-[#629BB5] font-bold tracking-widest uppercase mb-4">
-            FIXED SPEAKERS
-          </p>
         </motion.div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8">
