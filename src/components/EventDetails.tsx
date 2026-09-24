@@ -31,7 +31,7 @@ const eventDetails = [
     icon: ShieldCheck,
     title: 'MODE',
     value: 'Offline',
-    subtitle: 'Campus Conference',
+    subtitle: 'Campus Summit',
   },
 ];
 
