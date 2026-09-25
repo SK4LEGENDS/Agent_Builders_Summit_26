@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
             </Link>
             <div className="mt-4 mb-4 h-px w-full bg-platinum" />
             <p className="text-sm text-[#3A5566] leading-relaxed font-normal">
-              A full-day technology summit by the RP &amp; AI Society at St. Joseph&apos;s
+              A full-day technology summit by the RPA Society at St. Joseph&apos;s
               College of Engineering, Chennai.
             </p>
 
