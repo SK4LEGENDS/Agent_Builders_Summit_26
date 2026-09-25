@@ -36,16 +36,6 @@ const SpeakerCard: React.FC<{ speaker: Speaker; index: number }> = ({ speaker, i
         speaker.linkedin ? 'cursor-pointer' : ''
       }`}
     >
-      {/* Top-Right LinkedIn Badge on Image */}
-      {speaker.linkedin && (
-        <div 
-          className="absolute top-3.5 right-3.5 z-20 p-2 rounded-full bg-black/45 backdrop-blur-md text-white/90 border border-white/20 group-hover:bg-[#0077B5] group-hover:border-[#0077B5] group-hover:text-white transition-all shadow-md group-hover:scale-105"
-          title={`View ${speaker.name}'s LinkedIn profile`}
-        >
-          <Linkedin className="w-4 h-4" />
-        </div>
-      )}
-
       {!failed && src ? (
         <img
           src={src}
